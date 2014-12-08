@@ -1,0 +1,214 @@
+@font-face{
+	font-family:"ev";
+	src:url("../fonts/CloisterBlack.ttf") format("truetype");
+	font-weight:normal;
+    font-style:normal;	
+
+}
+.blanca,.negra{
+	position: relative;
+	width: 4em;
+	height: 4em;
+	display: inline-block;
+	padding: .2em;
+
+}
+
+
+
+
+.blanca{
+	background: #AAA;
+
+}
+.negra{
+  	background: #555;
+}
+#tablero{
+	margin: 0;
+	padding: 0;
+	z-index: 0;
+	width: auto;
+	-webkit-user-select:none;
+-moz-user-select:none
+}
+
+.ficha{
+	position: absolute;
+	width: 2.5em;
+	height: 3.5em;
+	margin-left:0.6em; 
+	margin-top:0.2em;
+	z-index: 100;
+    cursor:pointer;
+    margin-left: 1em;
+    
+}
+
+#matadas{
+	position: relative;
+	width: 20em;
+	max-width: 20em;
+	height: 20em;
+	border: 1px solid black;
+	box-shadow: 2px 2px 4px #000;
+}
+#info{
+	position: relative;
+	width: 20em;
+	max-width: 20em;
+	height: 20em;
+	border: 1px solid black;
+	background:-moz-linear-gradient(#525050,#111);
+	background:-webkit-linear-gradient(#525050,#111);
+	text-align: center;
+	box-shadow: 2px 2px 4px #000;
+	font-family: ev;
+
+}
+#info span{
+font-size: 3em;
+}
+#info img{
+	margin-top:1.4em;
+}
+#tablero,#matadas,#info{
+	display: inline-block;
+	vertical-align: top;
+}
+#matadas img{
+	
+	width: 2.5em;
+	height: 3.5em;
+}
+#coronadaB,#coronadaN{
+	position: absolute;
+	left:10em;
+	top: 0;
+	width: 16em;
+	height: 5em;
+	box-shadow: 2px 2px 5px #000;
+	background: #333;
+	display: none;
+	z-index: 2000;
+	border: 3px solid #000;
+
+}
+#coronadaN{
+	top:32.5em;
+	background: #DDD;
+}
+
+#coronadaB img,#coronadaN img{
+	position: relative;
+	display: inline;
+	margin-left: 1em;
+	margin-top: .5em;
+	cursor: pointer;
+}
+
+#coronadaB .torre,#coronadaN .torre{
+	position: absolute;
+	left: 1em;
+}
+#coronadaB .caballo,#coronadaN .caballo{
+	position: absolute;
+	left: 4em;
+}
+#coronadaB .alfil,#coronadaN .alfil{
+	position: absolute;
+	left: 7em;
+}
+#coronadaB .reina,#coronadaN .reina{
+	position: absolute;
+	left: 10em;
+}
+
+
+
+#coronadaB img:hover,#coronadaN img:hover{
+	opacity: 0.7;
+
+}
+
+#turnos{
+	position: absolute;
+	width: 40.5em;
+	height:10em;
+	background:#222; 
+	top:21em;
+	left: 39.4em;
+
+}
+#turnos p {
+	margin-left: 1.5em;
+	margin-top: 1.3em;
+	color: #3B1E00;
+	font-family: ev;
+	font-size: 2.6em;
+
+}
+
+@media screen and (max-width:625px){
+	
+	 #tablero{
+	 		margin-left: 5%;
+	 		width: 100%;
+	 		height: 90%;
+	 }
+		.blanca,.negra{
+		position: relative;
+		width: 8%;
+		height: 8%;
+
+	}
+	#info,#matadas{
+		margin-left: 5%;
+		margin-top: -8%;
+	}
+	.ficha{
+		position: relative;
+		width: 70%;
+		height: 80%;
+		padding: 0;
+	   	margin: .3em;
+	}
+	#turnos{
+		display: none;
+	}
+
+}
+
+@media screen and (max-width:445px){
+ #tablero{
+ 		margin-left: 5%;
+ 		width: 100%;
+ 		height: 70%;
+ 		 }
+
+ #info,#matadas{
+ 	display: block;
+ }
+
+
+}
+
+@media screen and (max-width:270px){
+	 #tablero{
+ 		margin-left: 0;
+ 		width: 100%;
+ 		height: 70%;
+ }
+ 	#info,#matadas{
+		margin-left:0;
+		width: 95%;
+		height:40%;
+		}
+
+	#info img{
+	width: 100%;
+	height: 100%
+	}
+
+
+}
